@@ -1,0 +1,21 @@
+{
+  "name": "rush",
+  "version": "1.0.0",
+  "description": "canvas video encoder",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run watch-server",
+    "watch-server": "webpack --watch --config ./webpack.config.js & cd dist; python -m SimpleHTTPServer"
+  },
+  "author": "Jay Moretti",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^2.7.2"
+  },
+  "devDependencies": {
+    "ts-loader": "^4.0.0",
+    "tslint": "^5.8.0",
+    "webpack": "^4.0.0",
+    "webpack-cli": "^2.0.9"
+  }
+}
