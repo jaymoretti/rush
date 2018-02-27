@@ -127,7 +127,7 @@ class RushEncoder {
       }
     }
 
-    const compressed:Uint8Array = pako.deflate(buffer);
+    const compressed:Uint8Array = pako.deflate(buffer, { level: 9 });
     const pngHeaderSize:number = 8;
     const rushHeaderSize:number = 5; // 2x 16-bit int for width & height + fps;
     const headerSize:number = pngHeaderSize + rushHeaderSize;

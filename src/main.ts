@@ -20,6 +20,6 @@ function decode(imagePath:string) {
 // encode('./sample/1-banana.mp4');
 // encode('./sample/Hammock.mp4');
 // encode('./sample/Voyage.mp4');
-decode('./sample/1-banana.png');
+// decode('./sample/1-banana.png');
 // decode('./sample/Hammock.png');
 // decode('./sample/Voyage.png');
