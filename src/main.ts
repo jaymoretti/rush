@@ -1,13 +1,25 @@
 import Rush from './rush/';
 
+function encode(videoPath:string) {
+  // create video element
+  const video = document.createElement('video');
+  video.src = videoPath;
+  video.autoplay = true;
 
-// create video element
-const video = document.createElement('video');
-video.src = './sample/1-banana.mp4';
-video.autoplay = true;
+  document.body.appendChild(video);
 
-document.body.appendChild(video);
+  const encoder = new Rush();
+  encoder.encode(video, true);
+}
 
-const encoder = new Rush(video);
-encoder.encode(true);
+function decode(imagePath:string) {
+  const decoder = new Rush();
+  decoder.decode(imagePath);
+}
 
+// encode('./sample/1-banana.mp4');
+// encode('./sample/Hammock.mp4');
+// encode('./sample/Voyage.mp4');
+decode('./sample/1-banana.png');
+// decode('./sample/Hammock.png');
+// decode('./sample/Voyage.png');
